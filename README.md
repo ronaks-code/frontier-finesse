@@ -4,6 +4,8 @@ Mobile-first boarding-pass designer. Every text value and every color on the
 pass is customizable, with live preview, color theme presets, an editable QR
 code, PNG export, and localStorage persistence.
 
+Live: https://ronaks-code.github.io/frontier-finesse/
+
 ## Stack
 - Next.js 15 (App Router) + React 19 + TypeScript
 - Tailwind CSS for styling
