@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: contain;
+}
+
+/* Native color picker styled as a clean swatch */
+input[type="color"].swatch {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  background: transparent;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), inset 0 0 0 2px #fff;
+}
+input[type="color"].swatch::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 10px;
+}
+input[type="color"].swatch::-webkit-color-swatch {
+  border: none;
+  border-radius: 10px;
+}
+input[type="color"].swatch::-moz-color-swatch {
+  border: none;
+  border-radius: 10px;
+}
+
+/* Stylized airline-mark "F" — three angled bars */
+.airline-mark {
+  display: inline-block;
+  line-height: 1;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.04em;
+  transform: skewX(-12deg);
+}
+
+/* Dashed flight number underline like the reference */
+.flight-dashes {
+  background-image: linear-gradient(
+    to right,
+    currentColor 60%,
+    transparent 0%
+  );
+  background-size: 8px 2px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+/* Hide scrollbar on the preset chips row */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Use safe-area insets on iOS */
+.safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 16px);
+}
+.safe-top {
+  padding-top: max(env(safe-area-inset-top), 0px);
+}
